@@ -1,4 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import axios from 'axios';
-import { fetchAppointmentsSuccess, addAppointmentSuccess, deleteAppointmentSuccess } from './actions/appointmentActions'; // Import actions
+ useEffect(() => {
+    // Fetch appointments from API on component mount
+    axios.get('/api/appointments')
+      .then(response => {
+        dispatch(fetchAppointmentsSuccess(response.data));
+      })
+      .catch(error => {
+        console.error('There was an error fetching the appointments!', error);
+      });
+  }, [dispatch]);
