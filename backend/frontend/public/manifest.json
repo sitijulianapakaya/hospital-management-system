@@ -1,1 +1,29 @@
+{
+  "short_name": "Healthcare",
+  "name": "Healthcare Management System",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#007bff",
+  "description": "A comprehensive system for managing healthcare operations, including appointments, billing, and patient records.",
+  "orientation": "portrait-primary",
+  "serviceworker": {
+    "src": "service-worker.js",
+    "scope": "/",
+    "type": "module"
+  }
+}
 
